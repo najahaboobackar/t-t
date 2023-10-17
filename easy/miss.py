@@ -7,9 +7,9 @@ def miss(arr,n):
     
         k=arr[n-1]
         s=0
-        k=(k*(k-1))/2
-        for i in range(n-1):
-            s=s+arr[i]
+        k=(k*(k+1))/2
+        print(k)
+        s=sum(arr)
         w=k-s 
         return w  
 main()     
