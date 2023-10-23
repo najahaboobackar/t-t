@@ -1,5 +1,5 @@
 def main():
-    arr=[7,1,5,3,6,4]
+    arr=[3,1,4,8,7,2,5]
     n=len(arr)
     p=stock(arr,n)
     print(p)
