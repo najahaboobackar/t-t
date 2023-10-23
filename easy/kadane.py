@@ -1,5 +1,5 @@
 def main():
-    arr=[4,-3,-2,2,3,1,-2,-3,6,-6,-4,2,1]
+    arr=[2, 1, -3, 4, -1, 2, 1, -5, 4]
     n=len(arr)
     kadane(arr,n)
 def kadane(arr,n):
@@ -20,5 +20,5 @@ def kadane(arr,n):
     print(max) 
     for j in range(st, en+1):
         b=arr[j]
-        print(b)
+        print(b, end=" ")
 main()             
