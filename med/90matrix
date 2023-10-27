@@ -5,23 +5,24 @@ def main():
     i=1
     j=1
     for i in range(row):
-        row=[]
+        row=[]#for rows array
         for j in range(col):
             val=int(input(f"enter the value for({i} {j})"))
-            row.append(val)
-        matrix.append(row)    
+            row.append(val)#value is append to row
+        matrix.append(row)#row is append to matrix    
     print(matrix)
-    anticlock(matrix)  
+    anticlock(matrix) 
+# this function is used to transpose the matrix 
 def anticlock(matrix):
     b=[]
-    for i in range(len(matrix)):
-        c=[]
-        for j in range(len(matrix[0])):
-            c.append(matrix[j][i])
+    for i in range(len(matrix)):#length of the row
+        c=[]  #row matrix
+        for j in range(len(matrix[0])):#length of th column
+            c.append(matrix[j][i]) #transpose j and  are inter chanaged
         b.append(c)    
     print(b)  
-    for i in range(len(b)-1,-1,-1):
-        for j in range(len(b[0])):
+    for i in range(len(b)-1,-1,-1):# decremening so the middle value is same and bottum and up interchange
+        for j in range(len(b[0])): #rotating 90degree
             print(b[i][j],end=" ")
         print()    
 main()          
