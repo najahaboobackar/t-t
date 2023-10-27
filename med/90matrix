@@ -1,0 +1,28 @@
+def main():
+    row =int(input("enter rthe number of rows"))
+    col=int(input("enter the number of columns"))
+    matrix=[]
+    i=1
+    j=1
+    for i in range(row):
+        row=[]
+        for j in range(col):
+            val=int(input(f"enter the value for({i} {j})"))
+            row.append(val)
+        matrix.append(row)    
+    print(matrix)
+    anticlock(matrix)  
+def anticlock(matrix):
+    b=[]
+    for i in range(len(matrix)):
+        c=[]
+        for j in range(len(matrix[0])):
+            c.append(matrix[j][i])
+        b.append(c)    
+    print(b)  
+    for i in range(len(b)-1,-1,-1):
+        for j in range(len(b[0])):
+            print(b[i][j],end=" ")
+        print()    
+main()          
+      
