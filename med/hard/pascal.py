@@ -1,12 +1,12 @@
 n=int(input("enter the limit"))
 list1=[]
-for i in range(n):
-    temp_list=[]
+for i in range(n):#thiis for column
+    temp_list=[] #temp_list is added at each row
     for j in range(i+1):
         if j==0 or j==i:
-            temp_list.append(1)
+            temp_list.append(1)# add 1 to end  and start
         else:
-            temp_list.append(list1[i-1][j]+list1[i-1][j-1]) 
+            temp_list.append(list1[i-1][j]+list1[i-1][j-1])  #previous number addition
     list1.append(temp_list)       
 print(list1)   
 
