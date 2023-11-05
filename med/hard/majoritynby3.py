@@ -1,5 +1,5 @@
 def  main():
-    arr=[3,3,3,2,1,4,4,4,4,4]
+    arr=[3,3,3,2,1,5,5,5,5,5]
     n=len(arr)
     majority(arr,n)
 def majority(arr,n):
