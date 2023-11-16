@@ -1,39 +1,15 @@
-
-
-
-from typing import List
-
-def findMissingRepeatingNumbers(a: [int]) -> [int]:
-    n = len(a)  # size of the array
-
-    # Find Sn and S2n:
-    SN = (n * (n + 1)) // 2
-    S2N = (n * (n + 1) * (2 * n + 1)) // 6
-
-    # Calculate S and S2:
-    S, S2 = 0, 0
-    for i in range(n):
-        S += a[i]
-        S2 += a[i] * a[i]
-
-    # S-Sn = X-Y:
-    val1 = S - SN
-
-    # S2-S2n = X^2-Y^2:
-    val2 = S2 - S2N
-
-    # Find X+Y = (X^2-Y^2)/(X-Y):
-    val2 = val2 // val1
-
-    # Find X and Y: X = ((X+Y)+(X-Y))/2 and Y = X-(X-Y),
-    # Here, X-Y = val1 and X+Y = val2:
-    x = (val1 + val2) // 2
-    y = x - val1
-
-    return [x, y]
-
-if __name__ == '__main__':
-    a = [3, 1, 2, 5, 4, 6, 7, 5]
-    ans = findMissingRepeatingNumbers(a)
-    print("The repeating and missing numbers are: {", ans[0], ", ", ans[1], "}\n")
-
+arr=[1,2,3,1,5]
+n1=len(arr)
+s=0
+s2=0
+sn=(n1*(n1+1))//2
+s2n=(n1*(n1+1)*(2*n1+1))//6
+for i in range(n1):
+    s+=arr[i]
+    s2+=arr[i]*arr[i]
+val1=s-sn
+val2=s2-s2n
+val2=val2//val1
+x=(val1+val2)//2
+y=x-val1
+print(x,y)   
