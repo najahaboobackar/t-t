@@ -1,4 +1,4 @@
-arr=[1,2,3,-4,-5]
+arr=[1, 2, -3, 0, -4, -5]
 n=len(arr)
 product1=0
 product=0
