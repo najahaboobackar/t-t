@@ -19,4 +19,4 @@ if __name__ == "__main__":
     x = 5
     ind=[]
     ind = floorCeil(arr, x)
-    print("The index is:", ind)
+    print("The index is:", ind[0],ind[1])
