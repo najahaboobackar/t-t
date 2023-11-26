@@ -15,7 +15,7 @@ def floorCeil(arr,x):
     return ans ,ans2         
             
 if __name__ == "__main__":
-    arr = [1, 2, 4, 7]
+    arr = [3, 4, 4, 7, 8, 10]
     x = 5
     ind=[]
     ind = floorCeil(arr, x)
