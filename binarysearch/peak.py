@@ -4,8 +4,7 @@ def peak(arr):
     high=n-1
     if n==1:
         return 0
-    if arr[0]<arr[1]:
-       return low
+    
     while low<=high:
         mid=(low+high)//2
         if arr[mid]>arr[mid+1] and arr[mid]>arr[mid-1]:
