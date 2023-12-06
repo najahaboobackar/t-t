@@ -9,6 +9,9 @@ def devisor(arr,val,th):
     if sum<=th:
         return True  
 def bsb(arr,th):
+    n=len(arr)
+    if n>th:
+        return -1
     high=max(arr)
     low=min(arr) 
     while low<=high:
@@ -19,10 +22,10 @@ def bsb(arr,th):
             low=mid+1
     return low 
 if __name__=="__main__":
-    arr = [1, 2, 3, 4, 5]  
-    l=8
+    arr = [8,4,2,3]  
+    l=10
     ans=bsb(arr,8)
-    print("the smallest devisor",ans+1)         
+    print("the smallest devisor",ans)         
            
       
         
