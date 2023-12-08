@@ -11,18 +11,19 @@ def kmiss(arr,v):
     return j    
 def kthelement(arr,k):
     low=1
-    high=max(arr)
+    n=len(arr)
+    high=n-1
     while low<=high:
         mid=(low+high)//2
         kth=kmiss(arr,k) 
-        if kth<=k:
+        if kth>=k:
             high=mid-1
         else:
             low=mid+1
     return low
 if __name__=="__main__":
     arr=[4,7,9,10] 
-    k=1
+    k=4
     ans=kthelement(arr,k)
     print("the missing value is ",ans)           
                    
