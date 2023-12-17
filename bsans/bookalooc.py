@@ -1,23 +1,35 @@
-def bookalloc(arr,k):
-    sum=0
-    ba=1
+def findpages(arr,pages):
+    student=1
+    studentspages=0
     n=len(arr)
-    for i in range(n-1):
-        max1=arr[i]
-        for j in range(n-1):
-            max1=max(max1,arr[j]+arr[i])
-    for i in range(n-1):
-        sum+=arr[i]
-        if max1<=sum:
-            ba+=1  
-    if ba>=k:
-        return sum
-    
-    
-if __name__== "__main__":
-    
+    for i in range(n):
+        if studentspages+arr[i]<=pages:
+            studentspages+=arr[i]
+        else:
+            student+=1
+            studentspages=arr[i]
+    return student  
+def bookallocation(arr,m,n):
+    low=max(arr)
+    high=sum(arr)
+    if m>n:
+        return -1
+    while high>=low:
+        mid=(low+high)//2
+        no_of_stu=findpages(arr,mid)
+        if no_of_stu>m:
+            low=mid+1
+        else:
+            high=mid-1
+    return low        
+
+if __name__=="__main__":
     arr = [25, 46, 28, 49, 24]
-    ans=bookalloc(arr,2)
+    n = 5
+    m = 4
+    ans=bookallocation(arr,m,n)
     print("The answer is:", ans)
-  
-                      
+
+        
+          
+                
